@@ -35,7 +35,7 @@ Toutes les dates d'achèvement attendu (completionexpected)
 | Choice (Sondage) | `timeopen`, `timeclose` | mod/choice/lib.php |
 |  | | choice_refresh_events($course->id); |
 |   |  | |
-| Forum (Forum) | `assesstimestart`, `assesstimefinish` | SANS |
+| [^1]Forum (Forum) | `assesstimestart`, `assesstimefinish` | SANS |
 |  | |  |
 | Glossary (Glossaire) | `assesstimestart`, `assesstimefinish` | SANS |
 |  | |  |
@@ -58,7 +58,7 @@ Toutes les dates d'achèvement attendu (completionexpected)
 |  | |  |
 
 
-NOTE : les forums sont amenés à évoluer, à partir de Moodle 3.8 ils sont notés !
+[^1]: les forums sont amenés à évoluer, à partir de Moodle 3.8 ils sont notés !
 
 ## [Informations pour développeurs](developp.md)
 

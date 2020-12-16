@@ -17,7 +17,7 @@ Le déplacement relatif à appliquer aux dates du cours est alors calculé de la
 	timeshift = nouvelle_date_debut – ancienne_date_debut
 
 ## Liste des dates modifiées si elles étaient renseignées ##
-$course->enddate	//date de fin du cours  
+`$course->enddate`	//date de fin du cours  
 Toutes les dates relatives aux restrictions ('availability_date\condition')  
 Toutes les dates d'achèvement attendu (completionexpected)  
 
@@ -26,7 +26,7 @@ Toutes les dates d'achèvement attendu (completionexpected)
 
 |  Modules  | Nom des champs date  | Report sur le calendrier étudiant              |
 |-----------|----------|------------------|
-| Assign (Devoir)| duedate allowsubmissionsfromdate    | mod/assign/lib.php  |
+| Assign (Devoir)| `duedate`, `allowsubmissionsfromdate`    | `mod/assign/lib.php`  |
 |                | gradingduedate cutoffdate           | assign_refresh_events($course->id); |
 |   |  | |
 | Assignment (Devoir)  | timedue, timeavailable, | SANS  |

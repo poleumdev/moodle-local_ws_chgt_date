@@ -20,3 +20,10 @@ Le déplacement relatif à appliquer aux dates du cours est alors calculé de la
 $course->enddate	//date de fin du cours  
 Toutes les dates relatives aux restrictions ('availability_date\condition')  
 Toutes les dates d'achèvement attendu (completionexpected)  
+
+### Date selon les activités (modules) ###
+
+|  Modules         | Nom des champs date   | Report sur le calendrier étudiant  | 
+|---------------- -|-----------------------|------------------------------------| 
+| Assign (Devoir)  | duedate allowsubmissionsfromdate  | mod/assign/lib.php                        | 
+|	           | gradingduedate cutoffdate         |assign_refresh_events($course->id); | 

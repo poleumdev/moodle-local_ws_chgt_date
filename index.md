@@ -23,7 +23,36 @@ Toutes les dates d'achèvement attendu (completionexpected)
 
 ### Date selon les activités (modules) ###
 
-|  Modules         | Nom des champs date   | Report sur le calendrier étudiant  | 
-|---------------- -|-----------------------|------------------------------------| 
-| Assign (Devoir)  | duedate allowsubmissionsfromdate  | mod/assign/lib.php                        | 
-|	           | gradingduedate cutoffdate         |assign_refresh_events($course->id); | 
+
+|  Modules  | Nom des champs date  | Report sur le calendrier étudiant              |
+|-----------|----------|------------------|
+| Assign (Devoir)| duedate allowsubmissionsfromdate    | mod/assign/lib.php  |
+|                | gradingduedate cutoffdate           | assign_refresh_events($course->id); |
+| phpmd  | FOUND 0 ERRORS AND 36 VIOLATIONS |
+| codechecker | (OK) exited with 0.  |
+| validate | (OK) exited with 0.  |
+| savepoints | (OK) exited with 0.  |
+| mustache | No relevant files found to process, free pass! |
+| grunt | Linted 972 files without errors |
+| phpunit | No PHPUnit tests to run, free pass! |
+| behat | No Behat features to run, free pass! |
+
+
+## Qualité des développements ##
+
+|  Modules Travis  moodle-plugin-ci | Résultat              |
+|-----------------------------------|-----------------------|
+| phplint                           | 6 files. No syntax error found |
+| phpcpd                            | 0.00% duplicated lines out of 780 total lines of code. |
+| phpmd  | FOUND 0 ERRORS AND 10 VIOLATIONS |
+| codechecker | (OK) exited with 0.  |
+| validate | (OK) exited with 0.  |
+| savepoints | (OK) exited with 0.  |
+| mustache | No relevant files found to process, free pass! |
+| grunt | (OK) exited with 0 |
+| phpdoc | (OK) exited with 0 |
+| phpunit | No PHPUnit tests to run, free pass! |
+| behat | No Behat features to run, free pass! |
+
+
+

@@ -29,13 +29,11 @@ Toutes les dates d'achèvement attendu (completionexpected)
 | Assign (Devoir)| duedate allowsubmissionsfromdate    | mod/assign/lib.php  |
 |                | gradingduedate cutoffdate           | assign_refresh_events($course->id); |
 |   |  | |
-| codechecker | (OK) exited with 0.  |
-| validate | (OK) exited with 0.  |
-| savepoints | (OK) exited with 0.  |
-| mustache | No relevant files found to process, free pass! |
-| grunt | Linted 972 files without errors |
-| phpunit | No PHPUnit tests to run, free pass! |
-| behat | No Behat features to run, free pass! |
+| Assignment (Devoir)  | timedue, timeavailable, | SANS  |
+|   |  timemodified  | |
+|   |  | |
+| Choice (Sondage) | timeopen, timeclose | mod/choice/lib.php |
+|  | | choice_refresh_events($course->id); |
 
 
 ## Qualité des développements ##

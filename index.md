@@ -26,35 +26,35 @@ Toutes les dates d'achèvement attendu (completionexpected)
 
 |  Modules  | Nom des champs date  | Report sur le calendrier étudiant              |
 |-----------|----------|------------------|
-| Assign (Devoir)| `duedate`, `allowsubmissionsfromdate`    | `mod/assign/lib.php`  |
-|                | gradingduedate cutoffdate           | assign_refresh_events($course->id); |
+| Assign (Devoir)| `duedate`, `allowsubmissionsfromdate`    | mod/assign/lib.php  |
+|                | `gradingduedate`, `cutoffdate`           | assign_refresh_events($course->id); |
 |   |  | |
-| Assignment (Devoir)  | timedue, timeavailable, | SANS  |
-|   |  timemodified  | |
+| Assignment (Devoir)  | `timedue`, `timeavailable` | SANS  |
+|   |  `timemodified`  | |
 |   |  | |
-| Choice (Sondage) | timeopen, timeclose | mod/choice/lib.php |
+| Choice (Sondage) | `timeopen`, `timeclose` | mod/choice/lib.php |
 |  | | choice_refresh_events($course->id); |
 |   |  | |
-| Forum (Forum) | assesstimestart, assesstimefinish | SANS |
+| Forum (Forum) | `assesstimestart`, `assesstimefinish` | SANS |
 |  | |  |
-| Glossary (Glossaire) | assesstimestart, assesstimefinish | SANS |
+| Glossary (Glossaire) | `assesstimestart`, `assesstimefinish` | SANS |
 |  | |  |
-| Lesson (Leçon) | available, deadline | mod/lesson/lib.php |
+| Lesson (Leçon) | `available`, `deadline` | mod/lesson/lib.php |
 |  | | lesson_refresh_events($course->id); |
 |  | |  |
-| Quiz (Test) | timeopen, timeclose | mod/quiz/lib.php |
+| Quiz (Test) | `timeopen`, `timeclose` | mod/quiz/lib.php |
 |  | | quiz_refresh_events($course->id); |
 |  | |  |
-| Scorm (Scorm) | timeopen, timeclose | mod/scorm/lib.php |
+| Scorm (Scorm) | `timeopen`, `timeclose` | mod/scorm/lib.php |
 |  | | scorm_refresh_events($course->id); |
 |  | |  |
-| Workshop (Atelier) | submissionstart, submissionend | mod/workshop/lib.php |
-|  | assessmentstart, assessmentend | workshop_refresh_events($courseid); |
+| Workshop (Atelier) | `submissionstart`, `submissionend` | mod/workshop/lib.php |
+|  | `assessmentstart`, `assessmentend` | workshop_refresh_events($courseid); |
 |  | |  |
-| Questionnaire (questionnaire) | opendate, closedate | SANS |
+| Questionnaire (questionnaire) | `opendate`, `closedate` | SANS |
 |  | |  |
-| Data (Base de données) | timeavailablefrom, timeavailableto, timeviewfrom | mod/data/lib.php |
-|  | timeviewto, assesstimestart, assesstimefinish | data_refresh_events($course->id); |
+| Data (Base de données) | `timeavailablefrom`, `timeavailableto`, `timeviewfrom` | mod/data/lib.php |
+|  | `timeviewto`, `assesstimestart`, `assesstimefinish` | data_refresh_events($course->id); |
 |  | |  |
 
 

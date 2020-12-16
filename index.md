@@ -60,6 +60,8 @@ Toutes les dates d'achèvement attendu (completionexpected)
 
 NOTE : les forums sont amenés à évoluer, à partir de Moodle 3.8 ils sont notés !
 
+## [Informations pour développeurs](developp.md)
+
 ## Qualité des développements ##
 
 |  Modules Travis  moodle-plugin-ci | Résultat              |

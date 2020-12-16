@@ -2,10 +2,11 @@
 
 La structure du plugin est celle d'un service web Moodle.  
 
-Les traitements sont regroupés dans la classe local_wschangedate_external du fichier externallib.php  
+Les traitements sont regroupés dans la classe local_wschangedate_external du fichier **externallib.php**  
 
 La fonction changedates réalise les traitements effectifs.  
 Si on souhaite prendre en compte un autre module d'activité, c'est à partir de cette méthode qu'il faudrait agir.  
+
 Si on doit ajouter trop de nouvelles méthodes, on pourra regroupper l'ensemble de nos méthodes 'public static' dans un fichier locallib.php, de sorte à diminuer la complexité
 de notre classe.  
 

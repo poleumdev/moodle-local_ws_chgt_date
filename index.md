@@ -35,7 +35,7 @@ Toutes les dates d'achèvement attendu (completionexpected)
 | Choice (Sondage) | `timeopen`, `timeclose` | mod/choice/lib.php |
 |  | | choice_refresh_events($course->id); |
 |   |  | |
-| [^1]Forum (Forum) | `assesstimestart`, `assesstimefinish` | SANS |
+| Forum[^1] (Forum) | `assesstimestart`, `assesstimefinish` | SANS |
 |  | |  |
 | Glossary (Glossaire) | `assesstimestart`, `assesstimefinish` | SANS |
 |  | |  |

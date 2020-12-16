@@ -53,6 +53,9 @@ Toutes les dates d'achèvement attendu (completionexpected)
 |  | |  |
 | Questionnaire (questionnaire) | opendate, closedate | SANS |
 |  | |  |
+| Data (Base de données) | timeavailablefrom, timeavailableto, timeviewfrom | mod/data/lib.php |
+|  | timeviewto, assesstimestart, assesstimefinish | data_refresh_events($course->id); |
+|  | |  |
 
 
 NOTE : les forums sont amenés à évoluer, à partir de Moodle 3.8 ils sont notés !

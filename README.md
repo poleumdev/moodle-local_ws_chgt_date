@@ -4,7 +4,7 @@
 
 Web service to update the start date of a course and all the dates of the activities of this course in a relative way.
 
-See doc : https://poleumdev.github.io/moodle_ws_chgt_date/
+See doc : https://poleumdev.github.io/moodle_ws_chgt_date/  (FR)
 
 ## License ##
 

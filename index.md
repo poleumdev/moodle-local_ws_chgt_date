@@ -62,21 +62,6 @@ NOTE : les forums sont amenés à évoluer, à partir de Moodle 3.8 ils sont not
 
 ## [Informations pour développeurs](developp.md)
 
-## Qualité des développements ##
-
-|  Modules Travis  moodle-plugin-ci | Résultat              |
-|-----------------------------------|-----------------------|
-| phplint                           | 6 files. No syntax error found |
-| phpcpd                            | 0.00% duplicated lines out of 780 total lines of code. |
-| phpmd  | FOUND 0 ERRORS AND 10 VIOLATIONS |
-| codechecker | (OK) exited with 0.  |
-| validate | (OK) exited with 0.  |
-| savepoints | (OK) exited with 0.  |
-| mustache | No relevant files found to process, free pass! |
-| grunt | (OK) exited with 0 |
-| phpdoc | (OK) exited with 0 |
-| phpunit | No PHPUnit tests to run, free pass! |
-| behat | No Behat features to run, free pass! |
 
 
 

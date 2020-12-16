@@ -28,7 +28,7 @@ Toutes les dates d'achèvement attendu (completionexpected)
 |-----------|----------|------------------|
 | Assign (Devoir)| duedate allowsubmissionsfromdate    | mod/assign/lib.php  |
 |                | gradingduedate cutoffdate           | assign_refresh_events($course->id); |
-| phpmd  | FOUND 0 ERRORS AND 36 VIOLATIONS |
+|   |  | |
 | codechecker | (OK) exited with 0.  |
 | validate | (OK) exited with 0.  |
 | savepoints | (OK) exited with 0.  |

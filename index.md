@@ -15,3 +15,8 @@ Le webservice reçoit l'identifiant du cours et la nouvelle date de début du co
 Le déplacement relatif à appliquer aux dates du cours est alors calculé de la façon suivante :
 
 	timeshift = nouvelle_date_debut – ancienne_date_debut
+
+## Liste des dates modifiées si elles étaient renseignées ##
+$course->enddate	//date de fin du cours  
+Toutes les dates relatives aux restrictions ('availability_date\condition')  
+Toutes les dates d'achèvement attendu (completionexpected)  

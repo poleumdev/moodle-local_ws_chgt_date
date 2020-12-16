@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_ws_chgt_date';
 $plugin->release = '0.4.1';
-$plugin->version = 2020121504;
+$plugin->version = 2020121601;
 $plugin->requires = 2017051500;
 $plugin->maturity = MATURITY_STABLE;

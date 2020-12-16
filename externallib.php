@@ -17,8 +17,8 @@
 /**
  * External Web Service.
  *
- * @package
- * @copyright  2020 Universite du Mans
+ * @package    local_ws_chgt_date
+ * @copyright  2020 Marc Leconte
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
@@ -29,8 +29,10 @@ require_once($CFG->libdir . "/externallib.php");
 
 /**
  * Definition of web services.
- * @copyright  2020 Universite du Mans
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ *
+ * @package    local_ws_chgt_date
+ * @copyright  2020 Marc Leconte
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 class local_wschangedate_external extends external_api {
 
@@ -53,10 +55,7 @@ class local_wschangedate_external extends external_api {
      * @return result of process, format json true or false with reason.
      */
     public static function changedate($courseid, $newbeg) {
-        global $USER;
-        global $DB;
-
-        $params = self::validate_parameters (self::changedate_parameters (), array ('courseid' => $courseid,
+        self::validate_parameters (self::changedate_parameters (), array ('courseid' => $courseid,
                     'newbeg' => $newbeg));
 
         // Processing.
@@ -76,7 +75,8 @@ class local_wschangedate_external extends external_api {
 
     /**
      * Change course's dates.
-     * clone of https://github.com/moodle/moodle/blob/master/lib/moodlelib.php ::reset_course_userdata($data)
+     * @param string $courseid The course id.
+     * @param String $newbeg new start date for the course.
      * @return returns a json structure with the result of the execution.
      */
     public static function changedates($courseid, $newbeg) {
@@ -150,6 +150,12 @@ class local_wschangedate_external extends external_api {
         return $ret;
     }
 
+    /**
+     * Updates the dates of the assigns and their inclusion in the calendars.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_assign($course, $timeshift) {
         global $DB, $CFG;
 
@@ -183,6 +189,12 @@ class local_wschangedate_external extends external_api {
         assign_refresh_events($course->id);
     }
 
+    /**
+     * Updates the dates of the assignments.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_assignment($course, $timeshift) {
         global $DB;
 
@@ -210,6 +222,12 @@ class local_wschangedate_external extends external_api {
         }
     }
 
+    /**
+     * Updates the dates of the choices and their inclusion in the calendars.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_choice($course, $timeshift) {
         global $DB, $CFG;
 
@@ -244,6 +262,10 @@ class local_wschangedate_external extends external_api {
      *  require_once($CFG->dirroot.'/mod/forum/locallib.php');
      * Puis de récupérer cmid avec $cm = get_coursemodule_from_id('forum', $course->id);
      * pour mettre a jours les calendriers avec : forum_update_calendar($mod, $cm->id);
+     *
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
      */
     public static function trt_forum($course, $timeshift) {
         global $DB;
@@ -268,6 +290,12 @@ class local_wschangedate_external extends external_api {
         }
     }
 
+    /**
+     * Updates the dates of the glossaries.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_glossary($course, $timeshift) {
         global $DB;
 
@@ -291,6 +319,12 @@ class local_wschangedate_external extends external_api {
         }
     }
 
+    /**
+     * Updates the dates of the lessons and their inclusion in the calendars.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_lesson($course, $timeshift) {
         global $DB, $CFG;
 
@@ -317,6 +351,12 @@ class local_wschangedate_external extends external_api {
         lesson_refresh_events($course->id);
     }
 
+    /**
+     * Updates the dates of the quizs and their inclusion in the calendars.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_quiz($course, $timeshift) {
         global $DB, $CFG;
 
@@ -343,6 +383,12 @@ class local_wschangedate_external extends external_api {
         quiz_refresh_events($course->id);
     }
 
+    /**
+     * Updates the dates of the scorms activities and their inclusion in the calendars.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_scorm($course, $timeshift) {
         global $DB, $CFG;
 
@@ -369,6 +415,12 @@ class local_wschangedate_external extends external_api {
         scorm_refresh_events($course->id);
     }
 
+    /**
+     * Updates the dates of the workshops and their inclusion in the calendars.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_workshop($course, $timeshift) {
         global $DB, $CFG;
 
@@ -407,7 +459,11 @@ class local_wschangedate_external extends external_api {
      * Traitement des Questionnaire (plugin additionnel !).
      * Je ne vois pas de methode de maj des event calendar
      * dans https://github.com/PoetOS/moodle-mod_questionnaire/blob/master/lib.php
-     * Aussi uniquement opendate et closedate seront mise a jour
+     * Aussi uniquement opendate et closedate seront mise a jour.
+     *
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
      */
     public static function trt_questionnaire($course, $timeshift) {
         global $DB;
@@ -436,6 +492,12 @@ class local_wschangedate_external extends external_api {
         }
     }
 
+    /**
+     * Updates the dates of the datas activities and their inclusion in the calendars.
+     * @param string $course The course (BDD object).
+     * @param String $timeshift The length of time to be added to the dates.
+     * @return result of process, true or false (for debug).
+     */
     public static function trt_data($course, $timeshift) {
         global $DB, $CFG;
         if (!$datas = $DB->get_records('data', array('course' => $course->id))) {

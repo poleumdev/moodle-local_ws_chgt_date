@@ -17,8 +17,8 @@
 /**
  * Test of the web service with the form settings.
  *
- * @package    local_wsattestoodle
- * @copyright  2019 Pole de Ressource Numerique de l'Universite du Mans
+ * @package    local_ws_chgt_date
+ * @copyright  2020 Marc Leconte
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
